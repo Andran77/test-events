@@ -107,6 +107,45 @@ export class AddEventsComponent{
               && (this.getControls(formGroup)[fieldName].touched || this.getControls(formGroup)[fieldName].dirty);
   }
 
+  getErrorMessage(formField) {
+    switch (formField) {
+      case 'eventName':
+        const eventNameErrors = this.getControls(this.newDayEvent).eventName.errors;
+        if (eventNameErrors.required) {
+          return 'Не указано название события';
+        }
+        break;
+      // case 'eventType':
+      //   const eventTypeErrors = this.getControls(this.newDayEvent).eventType.errors;
+      //   if (eventTypeErrors.required) {
+      //     return 'Не указано тип события';
+      //   }
+      //   break;
+      case 'budget':
+        const budgetErrors = this.getControls(this.newDayEvent).budget.errors;
+        if (budgetErrors.required) {
+          return 'Не указано бюджет события';
+        }
+      case 'address':
+        const addressErrors = this.getControls(this.newDayEvent).address.errors;
+        if (addressErrors.required) {
+          return 'Не указано адрес события';
+        }
+        break;
+      case 'time':
+        const timeErrors = this.getControls(this.newDayEvent).time.errors;
+        if (timeErrors.required) {
+          return 'Не указано время события';
+        }
+        break;
+      case 'note':
+        const noteErrors = this.getControls(this.newDayEvent).note.errors;
+        if (noteErrors.required) {
+          return 'Не указано заметки события';
+        }
+    }
+  }
+
   onSaveEvents(): void {
     this.changeControlsValidators(this.eventType.value);
     const formControls = this.newDayEvent.controls;

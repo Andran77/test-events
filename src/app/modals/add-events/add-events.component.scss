@@ -6,6 +6,14 @@ app-add-events {
     .mat-form-field {
         width: 100%;
     }
+    .mat-hint,.error {
+        text-align: right;
+        color: red !important;
+        width: 100%;
+    }
+    .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+        color: rgba(0,0,0,.54);
+    }
     button {
         width: 170px;
     }
