@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body {
+    margin: 0;
+}
+.mat-calendar-body-selected {
+    background-color: rgb(204, 203, 203);
+}
+.mat-calendar-body-cell-content {
+    border: none !important;
+    border-radius: unset !important;
+}
+.cdk-live-announcer-element,.cdk-visually-hidden {
+    display: none;
+}
+// .cdk-global-overlay-wrapper {
+//     z-index: 1;
+//     position: absolute;
+//     background: rgba(0, 0, 0, 0.75);
+//     width: 100%;
+//     height: 100%;
+//     .cdk-overlay-pane {
+//         width: 100%;
+//         height: 100%;
+//         max-width: 100% !important;
+//         display: flex;
+//         .mat-dialog-container {
+//             width: 400px;
+//             background: white;
+//             height: 600px;
+//             margin: auto;
+//         }
+//     }
+// }

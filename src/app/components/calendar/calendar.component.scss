@@ -1,0 +1,17 @@
+app-calendar {
+    margin: auto;
+    .calendar-wrapper{
+        width: 300px;
+        text-align: center;
+    }
+    .add-event {
+        margin-top: 20px;
+        background: transparent;
+        border: 1px solid;
+        border-radius: 2px;
+        width: 100%;
+        padding: 5px;
+        outline: none;
+        cursor: pointer;
+    }
+}

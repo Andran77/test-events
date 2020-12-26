@@ -1,0 +1,8 @@
+<div class="calendar-wrapper">
+    <mat-calendar
+              #calendar
+              [(selected)]="selectedDate"
+              (selectedChange)="monthSelected()">
+    </mat-calendar>
+</div>
+<button mat-button class="add-event" (click)="openDialog()">Добавить</button>

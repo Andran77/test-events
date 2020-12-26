@@ -1,0 +1,43 @@
+<div class="event-container">
+    <ng-container *ngFor="let actualEvent of actualEvents">
+        <ng-container [ngSwitch]="actualEvent.type">
+            <mat-card *ngSwitchCase="'fiesta'">
+                <mat-icons>
+                    <mat-icon (click)="editEvents(actualEvent)">edit</mat-icon>
+                    <mat-icon (click)="deleteEvents(actualEvent)">delete</mat-icon>
+                </mat-icons>
+                <mat-card-header>
+                    <mat-card-title>{{actualEvent.name}}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>Бюджет: {{actualEvent.budget}}$</p>
+                </mat-card-content>
+            </mat-card>
+            <mat-card *ngSwitchCase="'sessions'">
+                <mat-icons>
+                    <mat-icon (click)="editEvents(actualEvent)">edit</mat-icon>
+                    <mat-icon (click)="deleteEvents(actualEvent)">delete</mat-icon>
+                </mat-icons>
+                <mat-card-header>
+                    <mat-card-title>{{actualEvent.name}}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>Адрес: {{actualEvent.address}}</p>
+                    <p>Время: {{actualEvent.time}}</p>
+                </mat-card-content>
+            </mat-card>
+            <mat-card *ngSwitchCase="'other'">
+                <mat-icons>
+                    <mat-icon (click)="editEvents(actualEvent)">edit</mat-icon>
+                    <mat-icon (click)="deleteEvents(actualEvent)">delete</mat-icon>
+                </mat-icons>
+                <mat-card-header>
+                    <mat-card-title>{{actualEvent.name}}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>{{actualEvent.note}}</p>
+                </mat-card-content>
+            </mat-card>
+        </ng-container>
+    </ng-container>
+</div>

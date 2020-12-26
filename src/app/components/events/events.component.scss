@@ -1,0 +1,21 @@
+app-events {
+    width: 100%;
+    padding: 10px;
+    .mat-card {
+        font-family: fantasy;
+        margin-top: 5px;
+        border: 1px solid gray;
+        .mat-card-header-text {
+            margin: 0;
+            .mat-card-title {
+                font-size: 20px;
+                color: #5454f9;
+                text-decoration: underline;
+            }
+        }
+        mat-icons {
+            float: right;
+            cursor: pointer;
+        }
+    }
+}
